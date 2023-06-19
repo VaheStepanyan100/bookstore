@@ -4,7 +4,7 @@ import categoriesSlice from './categories/categoriesSlice';
 
 const store = configureStore({
   bookstore: booksSlice,
-  categories: categoriesSlice
+  categories: categoriesSlice,
 });
 
 export default store;
