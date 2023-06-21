@@ -29,6 +29,7 @@ export const postBook = createAsyncThunk(
     };
     try {
       const response = await axios.post(addBookURL, bookObj);
+      thunkAPI.dispatch(getBooks());
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue('something went wrong');
